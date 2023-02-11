@@ -19,7 +19,7 @@ input {
   outline: none;
   font-size: 1.2em;
 }
-
+input:hover,
 input:focus{
   border: 3px solid yellow;
   outline: none;

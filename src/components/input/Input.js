@@ -1,8 +1,16 @@
-import './Input.css'
-function Input() {
+import "./Input.css";
+function Input( {name, placeholder, onChange, value} ) {
   return (
-    <div>Input</div>
-  )
+    <div>
+      <input
+        type="text"
+        name= {name}
+        placeholder={placeholder}
+        onChange={onChange}
+        value={value}
+      />
+    </div>
+  );
 }
 
-export default Input
+export default Input;
