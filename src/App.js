@@ -11,12 +11,11 @@ function App() {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  const handleInput1 = (event) => {
-    setNum1(parseInt(event.target.value));
-  };
-
-  const handleInput2 = (event) => {
-    setNum2(parseInt(event.target.value));
+  const handleInput = (event) => {
+    console.log(event);
+    const {name, value} = event.target;
+    // console.log(name, value);
+    (name === 'num1')? setNum1(parseInt(value)): setNum2(parseInt(value))
   };
 
   const handleValidate = (event, action) => {
@@ -73,48 +72,49 @@ function App() {
       <h2>React Calculator</h2>
       <input
         type="text"
+        name="num1"
         placeholder="Num1"
-        onChange={handleInput1}
+        onChange={handleInput}
         value={num1}
       />
       <br />
       <input
         type="text"
+        name="num2"
         placeholder="Num2"
-        onChange={handleInput2}
+        onChange={handleInput}
         value={num2}
       />
 
       <div id="buttons">
-
-      <button
-        onClick={(event) => {
-          handleValidate(event, "+");
-        }}
-      >
-        +
-      </button>
-      <button
-        onClick={(event) => {
-          handleValidate(event, "-");
-        }}
-      >
-        -
-      </button>
-      <button
-        onClick={(event) => {
-          handleValidate(event, "*");
-        }}
-      >
-        *
-      </button>
-      <button
-        onClick={(event) => {
-          handleValidate(event, "/");
-        }}
-      >
-        /
-      </button>
+        <button
+          onClick={(event) => {
+            handleValidate(event, "+");
+          }}
+        >
+          +
+        </button>
+        <button
+          onClick={(event) => {
+            handleValidate(event, "-");
+          }}
+        >
+          -
+        </button>
+        <button
+          onClick={(event) => {
+            handleValidate(event, "*");
+          }}
+        >
+          *
+        </button>
+        <button
+          onClick={(event) => {
+            handleValidate(event, "/");
+          }}
+        >
+          /
+        </button>
       </div>
       <p>{error ? "" : result}</p>
       <p className={error ? "error" : "success"}>
