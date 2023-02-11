@@ -13,9 +13,9 @@ function App() {
 
   const handleInput = (event) => {
     console.log(event);
-    const {name, value} = event.target;
+    const { name, value } = event.target;
     // console.log(name, value);
-    (name === 'num1')? setNum1(parseInt(value)): setNum2(parseInt(value))
+    name === "num1" ? setNum1(parseInt(value)) : setNum2(parseInt(value));
   };
 
   const handleValidate = (event, action) => {
@@ -65,10 +65,6 @@ function App() {
 
   return (
     <div className="App">
-      <Input  />
-
-      {/* <Button /> */}
-
       <h2>React Calculator</h2>
       <input
         type="text"
@@ -116,7 +112,9 @@ function App() {
           /
         </button>
       </div>
-      <p><b>Result:</b> {error ? "" : result}</p>
+      <p>
+        <b>Result:</b> {error ? "" : result}
+      </p>
       <p className={error ? "error" : "success"}>
         {error ? errorMsg : successMsg}
       </p>
