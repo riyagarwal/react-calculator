@@ -1,7 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Input from "./components/input/Input";
-import Button from "./components/button/Button";
 
 function App() {
   const [num1, setNum1] = useState(0);
