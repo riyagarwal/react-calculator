@@ -42,22 +42,22 @@ function App() {
   const handleOperation = (action) => {
     switch (action) {
       case "+": {
-        setResult(`Result = ${num1 + num2}`);
+        setResult(`${num1 + num2}`);
         break;
       }
 
       case "-": {
-        setResult(`Result = ${num1 - num2}`);
+        setResult(`${num1 - num2}`);
         break;
       }
 
       case "*": {
-        setResult(`Result = ${num1 * num2}`);
+        setResult(`${num1 * num2}`);
         break;
       }
 
       case "/": {
-        setResult(`Result = ${num1 / num2}`);
+        setResult(`${num1 / num2}`);
         break;
       }
     }
@@ -116,7 +116,7 @@ function App() {
           /
         </button>
       </div>
-      <p>{error ? "" : result}</p>
+      <p><b>Result:</b> {error ? "" : result}</p>
       <p className={error ? "error" : "success"}>
         {error ? errorMsg : successMsg}
       </p>

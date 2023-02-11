@@ -16,11 +16,13 @@ input {
   background-color: black;
   color: white;
   border: 2px solid white;
+  outline: none;
   font-size: 1.2em;
 }
 
 input:focus{
-  border: 2px solid white;
+  border: 3px solid yellow;
+  outline: none;
 }
 
 button {
@@ -31,6 +33,9 @@ button {
   cursor: pointer;
 }
 
+button:hover{
+  background-color: yellow;
+}
 .error {
   color: red;
 }
