@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [num1, setNum1] = useState(0);
-  const [num2, setNum2] = useState(0);
+  const [num1, setNum1] = useState();
+  const [num2, setNum2] = useState();
   const [result, setResult] = useState(0);
   const [error, setError] = useState();
   const [errorMsg, setErrorMsg] = useState("");
